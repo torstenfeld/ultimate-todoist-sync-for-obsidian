@@ -58,7 +58,7 @@ const REGEX = {
     PROJECT_NAME: /\[project::\s*(.*?)\]/,
     TASK_CONTENT: {
         REMOVE_PRIORITY: /\s!!([1-4])\s/,
-        REMOVE_TAGS: /(^|\s)(#[a-zA-Z\d\u4e00-\u9fa5-]+)/g,
+        REMOVE_TAGS: /(^|\s)(#[a-zA-Z\d\u4e00-\u9fa5-/]+)/g,
         REMOVE_SPACE: /^\s+|\s+$/g,
         REMOVE_DATE: new RegExp(`(${keywords.DUE_DATE})\\s?\\d{4}-\\d{2}-\\d{2}`),
         REMOVE_INLINE_METADATA: /%%\[\w+::\s*\w+\]%%/,
@@ -66,7 +66,7 @@ const REGEX = {
         REMOVE_CHECKBOX_WITH_INDENTATION: /^([ \t]*)?(-|\*)\s+\[(x|X| )\]\s/,
         REMOVE_TODOIST_LINK: /\[link\]\(.*?\)/,
     },
-    ALL_TAGS: /#[\w\u4e00-\u9fa5-]+/g,
+    ALL_TAGS: /#[\w\u4e00-\u9fa5-/]+/g,
     TASK_CHECKBOX_CHECKED: /- \[(x|X)\] /,
     TASK_INDENTATION: /^(\s{2,}|\t)(-|\*)\s+\[(x|X| )\]/,
     TAB_INDENTATION: /^(\t+)/,
